@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import {useParams} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import styled from 'styled-components';
-import { CiHeart } from "react-icons/ci";
 
 function Product() {
 
@@ -9,14 +8,18 @@ function Product() {
   const [clickedProduct, setClickedProduct] = useState([]);
 
   const getClickedProduct = async () => {
-      const data = await fetch(`https://fakestoreapi.com/products/${params.id}`);
-      const dataResult = await data.json();
-      setClickedProduct(dataResult);
+    const data = await fetch(`https://fakestoreapi.com/products/${params.id}`);
+    const dataResult = await data.json();
+    setClickedProduct(dataResult);
   }
 
   useEffect(() => {
       getClickedProduct(params.id);
   }, [params.id]);
+
+  const handleAddToBag = () => {
+    console.log(clickedProduct)
+  }
 
   return (
     <DetailWrapper>
@@ -25,10 +28,7 @@ function Product() {
         <img src={clickedProduct.image} alt={clickedProduct.description} />
         <h3>£{clickedProduct.price}</h3>
       </div>
-        <Brick>
-          <CiHeart />
-          <button>Add</button>
-        </Brick>
+      <button onClick={handleAddToBag}>Add</button>
     </DetailWrapper>
   )
 }
@@ -73,19 +73,3 @@ const DetailWrapper = styled.div`
     color: pink;
   }
 `;
-
-const Brick = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 20px;
-
-  button {
-    border: 1px solid;
-  }
-
-  button:hover {
-    color: blue;
-  }
-` 

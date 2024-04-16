@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 function Category() {
   return (
     <List>
-      <NavLink to={'/Men'}>
+      <NavLink to={'/Men/'}>
         <h4>Men</h4>
       </NavLink>
-      <NavLink to={'/Women'}>
+      <NavLink to={'/Women/'}>
         <h4>Women</h4>
       </NavLink>
     </List>

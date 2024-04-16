@@ -2,12 +2,11 @@ import './App.css'
 import { BrowserRouter } from 'react-router-dom';
 import Pages from './pages/Pages';
 import Category from './components/Category';
+import Bag from './pages/Bag';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FcCloth } from "react-icons/fc";
-import { FaHeart } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
-import { FaShoppingBasket } from "react-icons/fa";
 
 function App() {
 
@@ -21,13 +20,8 @@ function App() {
               JS</Logo>
           </div>
           <Icons>
-            <Logo to={'/Favorite/'}>
-              <FaHeart />
-            </Logo>
             <MdAccountCircle />
-            <Logo to={'/Basket/'}>
-              <FaShoppingBasket />
-            </Logo>
+            <Bag />
           </Icons>
         </Nav>
         <Category />

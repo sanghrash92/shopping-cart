@@ -19,10 +19,8 @@ function Women() {
         {womenProduct.map((product) => {
             return (
                 <Card key={product.id}>
-                    <Link to={'/product/' + product.id}>
-                        <img src={product.image} alt={product.description} />
-                        <p>{product.title}</p>
-                    </Link>
+                    <img src={product.image} alt={product.description} />
+                    <p>{product.title}</p>
                 </Card>
             )
         })}
@@ -50,5 +48,9 @@ const Card = styled.div`
 
     img {
         width: 11rem;
+    }
+
+    img:hover {
+        cursor: pointer;
     }
 `;

@@ -1,36 +1,10 @@
-.wrapper {
-    margin: 4rem 0;
+
+.icon-fave:hover {
+    color: blue;
+    cursor: pointer;
 }
 
-.card {
-    min-height: 25rem;
-    border-radius: 2rem;
-    overflow: hidden;
-    position: relative;
-}
-
-.card img {
-    border-radius: 2rem;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card p {
-    position: absolute;
-    z-index: 10;
-    left: 50%;
-    bottom: 0%;
-    transform: translate(-50%, 0%);
-    color: black;
-    width: 100%;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1rem;
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.icon-basket:hover {
+    color: blue;
+    cursor: pointer;
 }

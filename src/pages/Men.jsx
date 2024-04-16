@@ -10,7 +10,6 @@ function Men() {
         const data = await fetch("https://fakestoreapi.com/products/category/men's clothing");
         const result = await data.json();
         setMenProduct(result);
-        console.log(menProduct)
     };
 
     useEffect(() => {
@@ -22,13 +21,14 @@ function Men() {
         {menProduct.map((product) => {
             return (
                 <Card key={product.id}>
-                    <Link to={'/product/' + product.id} >
-                        <div>
-                            <img src={product.image} alt={product.description} />
-                            <h4>£{product.price}</h4>
-                            <p>{product.title}</p>
-                        </div>
-                    </Link>
+                    <div>
+                        <p>{product.title}</p>
+                        <img src={product.image} alt={product.description} />
+                        <h4>£{product.price}</h4>
+                    </div>
+                    <div>
+                        <button>Add</button>
+                    </div>
                 </Card>
             )
         })}
@@ -46,19 +46,26 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-border-radius: 2rem;
-width: 500px;
-position: relative;
-flex-direction: column;
-
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 2rem;
+    width: 500px;
+    position: relative;
     flex-direction: column;
-}
 
-img {
-    width: 50%;
-}
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    img {
+        margin-bottom: 10px;
+        width: 50%;
+        border: 1px solid;
+    }
+
+    img:hover {
+        border: 2px solid blue;
+        cursor: pointer;
+    }
 `;
