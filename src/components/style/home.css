@@ -1,0 +1,37 @@
+
+.home {
+    border: 1px solid red;
+}
+
+.nav {
+border: 1px solid;
+padding: 20px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+gap: 15px;
+background: #132743;
+}
+
+.btn-home,
+.btn-product,
+.btn-cart {
+    transition: all 0.5s ease;
+    background-color: #ffb5b5;
+    padding: 10px; 
+}
+
+.btn-home:hover {
+    background: #ffb5b5;
+    padding: 15px;
+}
+
+.btn-product:hover {
+    background: #ffb5b5;
+    padding: 15px;
+}
+
+.btn-cart:hover {
+    background: #ffb5b5;
+    padding: 15px;
+}
