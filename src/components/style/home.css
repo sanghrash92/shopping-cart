@@ -1,16 +1,22 @@
 
-.home {
-    border: 1px solid red;
-}
-
 .nav {
-border: 1px solid;
 padding: 20px;
 display: flex;
-justify-content: flex-end;
+justify-content: space-between;
 align-items: center;
-gap: 15px;
 background: #132743;
+}
+
+.nav .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav .icon {
+    font-size: 5rem;
+    color: white;
 }
 
 .btn-home,

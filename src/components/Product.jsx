@@ -1,4 +1,5 @@
-import '../components/style/products.css'
+import '../components/style/products.css';
+import PropTypes from 'prop-types'
 
 function Product({ productItem, addToCart }) {
   return (
@@ -19,6 +20,11 @@ function Product({ productItem, addToCart }) {
         </div>
     </div>
   )
+}
+
+Product.propTypes = {
+  productItem: PropTypes.array,
+  addToCart: PropTypes.func,
 }
 
 export default Product
